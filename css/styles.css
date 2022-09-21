@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.dice {
+  background-color: #fff;
+  border: 2px solid #222;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1rem);
+  grid-template-rows: repeat(3, 1rem);
+  grid-template-areas:
+    "a . b"
+    "c d e"
+    "f . g";
+  gap: 0.5rem;
+}
+
+.dice aside {
+  background-color: #222;
+  border-radius: 50%;
+  /* display: none; */
+}
+
+.dice aside:nth-child(1) {
+  grid-area: d;
+}
+
+.dots-1 aside:nth-child(2),
+.dots-1 aside:nth-child(3),
+.dots-1 aside:nth-child(4),
+.dots-1 aside:nth-child(5),
+.dots-1 aside:nth-child(6) {
+  display: none;
+}
+
+.dots-2 aside:nth-child(1) {
+  grid-area: a;
+}
+.dots-2 aside:nth-child(6) {
+  grid-area: g;
+}
+
+.dots-2 aside:nth-child(2),
+.dots-2 aside:nth-child(3),
+.dots-2 aside:nth-child(4),
+.dots-2 aside:nth-child(5) {
+  display: none;
+}
+
+.dots-3 aside:nth-child(1) {
+  grid-area: a;
+}
+.dots-3 aside:nth-child(2) {
+  grid-area: d;
+}
+.dots-3 aside:nth-child(3) {
+  grid-area: g;
+}
+
+.dots-3 aside:nth-child(4),
+.dots-3 aside:nth-child(5),
+.dots-3 aside:nth-child(6) {
+  display: none;
+}
+
+.dots-4 aside:nth-child(1) {
+  grid-area: a;
+}
+
+.dots-4 aside:nth-child(2) {
+  grid-area: f;
+}
+
+.dots-4 aside:nth-child(3) {
+  grid-area: b;
+}
+
+.dots-4 aside:nth-child(4) {
+  grid-area: g;
+}
+
+.dots-4 aside:nth-child(5),
+.dots-4 aside:nth-child(6) {
+  display: none;
+}
+
+.dots-5 aside:nth-child(1) {
+  grid-area: a;
+}
+.dots-5 aside:nth-child(2) {
+  grid-area: f;
+}
+.dots-5 aside:nth-child(3) {
+  grid-area: d;
+}
+.dots-5 aside:nth-child(4) {
+  grid-area: b;
+}
+.dots-5 aside:nth-child(5) {
+  grid-area: g;
+}
+.dots-5 aside:nth-child(6) {
+  display: none;
+}
+
+.dots-6 aside:nth-child(1) {
+  grid-area: a;
+}
+.dots-6 aside:nth-child(2) {
+  grid-area: c;
+}
+.dots-6 aside:nth-child(3) {
+  grid-area: f;
+}
+.dots-6 aside:nth-child(4) {
+  grid-area: b;
+}
+.dots-6 aside:nth-child(5) {
+  grid-area: e;
+}
+.dots-6 aside:nth-child(6) {
+  grid-area: g;
+}
